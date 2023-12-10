@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        
+
+        
+
+
+
+
+
+
+
+        
+        // Написать функцию нахождения пересечения массивов
+
+        // function includesValue (arr1,arr2) {
+        //     let answer = arr1.filter(function(x){
+        //         return arr2.includes(x);
+        //     });
+        //     return answer;
+        // }
+
+        // console.log (includesValue([1,2,3,4,5],[3,4,5,6,7]));
+
+
+
+
+
+
+
+
+
+
+        // Написать функцию разрезания массива
+        // на части заданного размера
+
+        // function arraySliced (arr,n) {
+        //     let answer = [];
+        //     for (let i=0; i< Math.ceil(arr.length/n) ; i++) {
+        //         answer[i] = arr.slice((i*n),(i*n)+n);
+        //     }
+        //     return answer;
+        // }
+
+        // console.log (arraySliced([1,2,3,4,5,6,7,8,9,10,11], 3));
+
+
+
+
+
+
+
+
+        // Преобразование глубокого массива в одномерный
+        // через метод flat() и РЕКУРСИЕЙ
+
+        // function arrayFlat (arr) {
+        //     return arr.flat(Infinity);
+        // }        
+
+        // function arrayFlatRecurs (arr) {
+        //     arr=arr.flat();
+        //     counter++;
+        //     if (counter<arr.length) {
+        //         arrayFlatRecurs(arr);
+        //     }
+        //     return arr;
+        // }
+        // let counter=0;
+        // console.log (arrayFlat([1,2,3,[4,5,6,[7,8,9,[10,11,12]]],[13,14]]));
+        // console.log (arrayFlatRecurs([1,2,3,[4,5,6,[7,8,9,[10,11,12]]],[13,14]]));
+
+
+
+
+
+
+
+
+
+        // Напиши функцию для сравнения 2х массивов на равенство
+
+        // function arrayEquality (arr1, arr2) {
+        //     return String(arr1)==String(arr2);
+        // }
+
+        // console.log (arrayEquality ([1,2,3],[1,2,3]));
+        // console.log (arrayEquality ([1,1,3],[1,2,3]));
+
+
+
+
+
+
+
+
+
+        // Написать функцию которая будет убирать повторные значения
+        // 4 варианта как я это сделал. Остаются только уникальные значения
+
+        // function uniqNumber1 (num) {
+        //     let answer = new Set(num);
+        //     return Array.from (answer);
+        // }
+
+        // function uniqNumber2 (num) {
+        //     let answer = [];
+            
+        //     for (let ch of num) {
+        //         if (!answer.includes(ch)) {answer.push(ch)}
+        //     }
+
+        //     return answer;
+        // }
+        
+        // function uniqNumber3 (num) {
+        //     let answer = [];
+        //     let filteredNum = num.sort();
+
+        //     for (let i=0; i<filteredNum.length ; i++) {
+        //         if ((filteredNum[i] != filteredNum[i+1])) {
+        //             answer.push(filteredNum[i]);
+        //         }
+        //     }
+
+        //     return answer;
+        // }
+
+        // function uniqNumber4 (num) {
+        //     let answer = [];
+        //     let counter = 0;
+        //     answer.length = num.length;
+        //     answer.fill("");
+
+        //     for (let i = 0; i<num.length ; i++) {
+        //         counter=0;
+        //         for (let j = 0 ; j<answer.length ; j++) {
+        //             if (num[i]!=answer[j]) {counter++}
+        //         }
+        //         if (counter==num.length) {
+        //             answer[i] = num[i];
+        //         }
+        //     }
+        //     return answer.join("").split("");
+        // }
+
+        // console.log (uniqNumber1([1,2,3,1,2]));
+        // console.log (uniqNumber2([1,2,3,1,2]));
+        // console.log (uniqNumber3([1,2,3,1,2]));
+        // console.log (uniqNumber4([1,2,3,1,2]));
+
+
+
+
+
+
+
+
+
+        // Написать функцию, которая будет переворачивать предложение целиком
+        // И написать функцию, которая будет переворачивать слова в предложении , без изменения их порядка
+
+        // function wordReverse (str) {
+        //     return String( Array.from(str).reverse().join(""));
+        // }
+
+        // function slogReverse (str) {
+        //     let answer = [];
+        //     let strWork = Array.from( str).join("").split(" ");
+            
+        //     for (let ch of strWork) {
+        //         answer.push(Array.from(ch).reverse().join(""))
+        //     }
+            
+        //     return String( answer.join(" "));
+        // }
+ 
+ 
+        // console.log (wordReverse ("Welcome to this Javascript Guide!"));
+        // console.log (slogReverse ("Welcome to this Javascript Guide!"));
+
+
+
+
+
+        // Сделать функцию которая будет принимать исходный массив и массив убираемых значений
+        // на выходе получаем массив в котором нет значений из второго массива
+        
+        // function deleteArray (arr, delArr) {
+        //     let answerArr= [];
+        //     counter = 0;
+        //     for (let ch of arr) {
+        //         counter=0;
+        //         for (let char of delArr) {
+        //             if (char == ch) {
+        //                 counter++;
+        //             }
+        //         }
+        //         if (counter < 1) {
+        //             answerArr.push(ch);
+        //         }
+        //     }
+
+        //     return answerArr;
+        // }        
+
+        // console.log (deleteArray ([1,"a",3,"b",5,"c"], [1,"b","c"]));
+
+
+
+
+
+
+
+        // написать 2 функции, которые будут очищать исходный массив от всякого шлака,
+        // Например пустых строк, нала, андефайнда или нана.
+
+        // function cleanerArray (arr) {
+        //     let cleanArr = [];
+        //     for(let ch of arr) {
+        //         if ((ch != false) && (ch != undefined) && (ch != "") && (ch != null) && (ch != NaN)) {
+        //             cleanArr.push(ch)
+        //         };
+        //     }
+
+        //     return cleanArr;
+        // }
+
+        // function cleanerArrayNull (arr) {
+        //     let cleanArr = [];
+        //     for(let ch of arr) {
+        //         if ((ch != undefined) && (ch != null)) {
+        //             cleanArr.push(ch)
+        //         };
+        //     }
+
+        //     return cleanArr;
+        // }
+
+        // console.log (cleanerArray([0, 1, false, 2, undefined, '', 3, null]));
+        // console.log (cleanerArrayNull([0, 1, false, 2, undefined, '', 3, null]));
+
+
+
+
+
+
+        // Развернуть массив без использования reverse 
+        //
+
+        // function reverseArray (arr) {
+        //     let reversArr = [];
+        //     let counter = 0;
+        //     for (let i=arr.length; i>0; i--) {
+        //         reversArr[i-1] = arr[counter];
+        //         counter++;
+        //     }
+            
+        //     return reversArr;
+        // }
+
+        // console.log (reverseArray([1,2,3,4,5]));
+
+
+
+
+
+
+
+        // Сделать функцию которая будет создавать массив заданной длины 
+        // и заполнять массив заданными значениями
+
+        // function createMassive(length,value) {
+        //     let newMassive = [];
+        //     for (let i=0; i<length; i++) {
+        //         newMassive.push(value);
+        //     }
+
+        //     return newMassive;
+        // }
+
+        // console.log (createMassive(5, 1));
+
+    </script>
+
+</body>
+</html>
